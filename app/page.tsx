@@ -23,8 +23,8 @@ import type {
   RoadmapSection,
 } from "@/types/storyblok";
 
-// Use shorter revalidation for draft mode, longer for published
-export const revalidate = process.env.NEXT_PUBLIC_STORYBLOK_VERSION === "draft" ? 10 : 60;
+// Revalidate every 10 seconds to see draft changes quickly
+export const revalidate = 10;
 
 export default async function Home() {
   const response = await getHomepage();
