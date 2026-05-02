@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
+import StoryblokProvider from "@/components/StoryblokProvider";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -39,7 +40,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+        <StoryblokProvider>{children}</StoryblokProvider>
+      </body>
     </html>
   );
 }
