@@ -1,23 +1,20 @@
 import StoryblokClient from "storyblok-js-client";
 import type { StoryblokResponse } from "@/types/storyblok";
 
+const isDraft = process.env.NEXT_PUBLIC_STORYBLOK_VERSION !== "published";
+
 const Storyblok = new StoryblokClient({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
-  cache: {
-    clear: "auto",
-    type: "memory",
-  },
+  cache: isDraft ? { clear: "auto", type: "none" } : { clear: "auto", type: "memory" },
 });
 
 export async function getStory(slug: string): Promise<StoryblokResponse | null> {
   try {
-    const version =
-      process.env.NEXT_PUBLIC_STORYBLOK_VERSION === "published"
-        ? "published"
-        : "draft";
+    const version = isDraft ? "draft" : "published";
 
     const response = await Storyblok.get(`cdn/stories/${slug}`, {
       version,
+      cv: isDraft ? Date.now() : undefined, // Cache busting for draft mode
     });
 
     return response.data as StoryblokResponse;
