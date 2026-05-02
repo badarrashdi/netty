@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: Readonly<HeroProps>) {
-  const title = data?.title || "Where Ambition Meets Style";
+  const title = data?.title || "Where Ambition Meets Style — Workwear for the Modern";
   const heroImage = data?.banner?.filename || "/img/banner.jpg";
 
   return (
