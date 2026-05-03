@@ -16,9 +16,9 @@ export default function Footer() {
       className="py-8 md:py-10 bg-white border-t border-border"
     >
       <div className="container mx-auto px-6 md:px-8 lg:px-16">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
+        <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-4 md:gap-6">
           {/* Left — email + socials */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 items-center md:items-start">
             <a
               href="mailto:hello@worknatty.com"
               className="font-body text-sm text-text-muted hover:text-brown transition-colors"
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Right — copyright */}
-          <div className="text-right">
+          <div className="text-center md:text-right">
             <p className="font-body text-xs text-text-light">
               © 2025 Work Natty
             </p>
