@@ -30,9 +30,10 @@ export default function Footer() {
                 Follow us
               </span>
               <a
-                href="#"
+                href="https://www.instagram.com/worknatty/"
                 aria-label="Instagram"
                 className="text-text-muted hover:text-brown transition-colors"
+                target="_blank"
               >
                 {/* Instagram icon */}
                 <svg
@@ -49,9 +50,10 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/worknatty1/"
                 aria-label="LinkedIn"
                 className="text-text-muted hover:text-brown transition-colors"
+                target="_blank"
               >
                 {/* LinkedIn icon */}
                 <svg
@@ -70,7 +72,7 @@ export default function Footer() {
           {/* Right — copyright */}
           <div className="text-center md:text-right">
             <p className="font-body text-xs text-text-light">
-              © 2025 Work Natty
+              © 2026 Work Natty
             </p>
             <p className="font-body text-xs text-text-light">
               Where Ambition Meets Style
