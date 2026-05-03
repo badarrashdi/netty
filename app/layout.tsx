@@ -20,9 +20,6 @@ export const metadata: Metadata = {
   title: "Work Natty — Where Ambition Meets Style",
   description:
     "Work Natty is a modern fashion brand redefining workwear for women — combining elegance, comfort, and confidence in every piece.",
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 export default function RootLayout({
